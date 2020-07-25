@@ -171,7 +171,10 @@ async def show(ctx):
 @bot.command(name='nuclear')
 async def clear(ctx):
         turn_list.clear()
-        await ctx.send("あぁ～:heart: 予約中の人に核兵器使うの気持ちいい:heart:")
+        if ctx.author.name == 'GESU' or ctx.author.name == '源氏':
+            await ctx.channel.send("不用意なクリアを要請するゲッスちゃんに核兵器打ち込むわに")
+        else:
+            await ctx.send("あぁ～:heart: 予約中の人に核兵器使うの気持ちいい:heart:")
 
 # 予約処理実行用関数
 @bot.command()
